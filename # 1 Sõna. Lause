@@ -1,0 +1,27 @@
+# 1 Sõna/Lause
+
+# Sisestage sõna või laise klaviatuurilt ja loendage, mitu vokaali ja mitu konsonanti selles on.
+# Kui on sisestatud lause, loendage ka kirjavahemärgid ja tühikud.
+
+sona = input('Sisestage sõna: ')
+print(sona)
+sona_list = list(sona)
+kon=('qwrtplkmnhbgvfcdxsz')
+konsonanti =list(kon)
+vok= ('aeuyoi')
+vokaali = str(vok)
+sum = ('.,<>;:/\\\'\"?!')
+sumbol = list(sum)
+v=s=k=0
+for vokaali_l in sona_list:
+    if vokaali_l.lower() in vokaali:
+        v +=1
+for sumbol_l in sona_list:
+    if sumbol_l in sumbol:
+        s+=1
+for konsonanti_l in sona_list:
+    if konsonanti_l.lower() in konsonanti:
+       k+=1
+print(f'Konsonanti on {k}')
+print(f'Vokaali on {v}')
+print(f'Sumbol on {s}')
