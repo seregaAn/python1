@@ -10,7 +10,7 @@ kon=('qwrtplkmnhbgvfcdxsz')
 konsonanti =list(kon)
 vok= ('aeuyoi')
 vokaali = str(vok)
-sum = ('.,<>;:/\\\'\"?!')
+sum = ('., <>;:/\\\'\"?!')
 sumbol = list(sum)
 v=s=k=0
 for vokaali_l in sona_list:
