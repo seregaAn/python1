@@ -1,0 +1,25 @@
+# import random
+
+arv_mängijad = 1
+otsust_langetama = list()
+mängijad = list()
+tulemus = {}
+while arv_mängijad > 3 or arv_mängijad == 1:
+    try:
+        arv_mängijad = int(input("Mitu mängijat on? Kirjuta ühest kolmeni; '2' või '3': "))
+    except: 
+        print('Kirjuta "2" või "3"')
+
+for i in range(arv_mängijad):
+    nimi = input("Sisestage mängija {} nimi: ".format(i+1))
+    mängijad.append(nimi)
+    tulemus[nimi] = 0
+
+for nimi_mängijad in (tulemus):
+    valik = input("{} vali kivi, paber või käärid: ".format(nimi_mängijad))
+    if valik.lower() in ["kivi", "paber", "käärid"]:
+        otsust_langetama.append(valik.lower())
+    else:
+        print("Vigane valik. Palun sisesta kivi, paber või käärid.")
+
+# To bi continued
