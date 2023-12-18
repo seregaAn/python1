@@ -1,0 +1,31 @@
+import random
+tabel_mang = [0]
+tabel_arvuti = [0]
+nimi = input('Sisestage oma nimi: ')
+mangu_jatk = True
+while mangu_jatk:
+	valik = input('Valige kolme valiku hulgast: "ki"- (kivi), "ka"- (käärid) või "p"- (paber)').lower()
+	if valik not in ['ki', 'ka', 'p']:
+		print('Sisestusviga. Proovi uuesti.')
+		continue
+	num_valik = {1:'ki', 2:'ka', 3: 'p'}
+	arvuti_valik = num_valik[random.randint (1, 3)]
+	print(f'Arvuti valik = {arvuti_valik}')
+	voidukombi = [('p', 'ki'), ('ki', 'ka'), ('ka', 'p')]
+	if valik == arvuti_valik:
+		print('Viigiseis')
+	elif (valik, arvuti_valik) in voidukombi:
+		print(f'Võitis {nimi}!')
+		tabel_mang = [n+1 for n in tabel_mang]
+	else:
+		print('Võitis arvuti')
+		tabel_arvuti = [n+1 for n in tabel_arvuti]
+	mangu_jatk = input('Kas me ikka mängime?  j//e').lower() == 'j'
+	if mangu_jatk == False:
+		if tabel_mang > tabel_arvuti:
+			print(f'Võitis {nimi}! Väravaarve: {tabel_mang}:{tabel_arvuti}')
+		elif tabel_arvuti > tabel_mang:
+			print(f'Võitis arvuti! Väravaarve: {tabel_arvuti}:{tabel_mang}')
+		else:
+			print(f'Viigiseis! Väravaarve: {tabel_mang}:{tabel_arvuti}')
+		
