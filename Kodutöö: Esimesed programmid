@@ -1,0 +1,82 @@
+# Kodutöö: Esimesed programmid
+
+# 1
+
+nimi = input("Mis sinu nimi on?: ")
+print("Tere! Tervitan sind " + nimi)
+
+# 2
+
+test = 3 + 8 / (4 - 2) * 4
+test1 = 3 + 8 / 4 - 2 * 4
+print(test)  # Скобки беспорно влияют на приоритет 
+print(test1) #  арифметического действия
+
+
+#2.1
+
+import math
+
+while True:
+	try:
+		ringi_r = float(input("Sisestage sisse kirjutatud ringi raadius: "))
+		print(f"Ruudu pindala on {round (4*ringi_r*ringi_r, 1)}")
+		print(f"Ruudu ümbermõõt on {round(8*ringi_r, 1)}")
+		print(f"Ringi pindala on {round(math.pi*ringi_r*ringi_r, 1)}")
+		print(f"Ringi ümbermõõt on {round(2*math.pi*ringi_r, 1)}")
+		break
+	except:
+		print("Sisestusviga. Proovi uuesti.")
+		
+#2.2
+
+print("Maa raadius ekvaatori kohal on 6378 km")
+print("Mündi läbimõõt on 25.75 mm")
+raadius_km = 6378
+mundi_labimoot_mm = 25.75
+print(f"Ekvaatori katmiseks läheb vaja {math.ceil(2*math.pi*raadius_km*10**6/mundi_labimoot_mm)} kaheeurost münti")
+
+#3
+
+sona = 'kill-koll '
+sona_2 = 'killadi-koll '
+print(sona *2 + sona_2 + sona *2)
+print(sona_2 + sona * 3)
+print(sona)
+
+#4
+
+rongi_heli = input("Sisestage rongi heli: ")+ ' '
+rataste_heli = input("Sisestage rataste heli: ")+ ' '
+print(f"""Rong see sõitis {rongi_heli*3},
+piilupart oli rongijuht.
+Rattad tegid {rataste_heli*3},
+{rataste_heli*3} ja {rataste_heli*3}.
+Aga seal rongi peal,
+kas sa tead, kes olid seal?""")
+
+#5
+
+a = float(input("Sisestage ristküliku külje a pikkus: "))
+b = float(input("Sisestage ristküliku külje b pikkus: "))
+print(f"Ristküliku ümbermõõt on {(a+b)*2}")
+print(f"Ristküliku pindala on {a*b}")
+
+#6
+
+kutust = float(input("Sisestage tangitud kütuse liitrid: "))
+labitud = float(input("Sisestage läbitud kilomeetrid: "))
+print(f"Kütusekulu on {round(kutust/labitud*100, 1)} lt/100km")
+
+#7
+
+keskmine_kiirus_km_t = 29.9
+print(f"Minuti pärast kõnnib {round(keskmine_kiirus_km_t/60, 1)} km")
+
+
+# 8
+
+minutid = int(input("Sisestage mitu on minuti: "))
+tunnid = minutid // 60
+v_minutid = minutid % 60
+print(f"{minutid} = {tunnid}:{v_minutid}")
